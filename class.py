@@ -1,30 +1,21 @@
-class Employee:
-    raise_amt = 1.04
-    def __init__(self, first, last, pay):
-        self.first = first
-        self.last = last
-        self.pay = pay
-        self.email = first + "." + last + "@slworld.com"
+#Convert string to list
 
-    def fullname(self):
-        return self.first +" "+self.last
+str_lst = "aabbccddeeff"
 
-    def apply_raise(self):
-        self.pay = int(self.pay * self.raise_amt)
+lst = []
 
-    @classmethod
-    def set_raise_amt(cls, amount):
-        cls.raise_amt = amount
+for i in str_lst:
+    lst.append(i)
 
-    @staticmethod
-    def is_workday(day):
-        if day.weekday() == 5 or day.weekday() == 6:
-            return False
-        return True
+print(lst)
 
-emp_1 = Employee("Jason", "Kim", 50000)
-emp_2 = Employee("James", "Lee", 40000)
+#Convert list to string
 
-Employee.set_raise_amt(2.42)
-emp_1.apply_raise()
-print(emp_1.pay)
+lst = ["H", "e", "l", "l", "o"]
+
+str_lst2 = ""
+
+for i2 in lst:
+    str_lst2 = str_lst2 + i2
+
+print(str_lst2)
