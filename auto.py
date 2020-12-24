@@ -41,57 +41,70 @@ while attempts > 0 and status is False:
             rnd_lst[p] = "-"
             masked[p] = choice
 
+
+            
+            
+# import random
+
+# lst = ["apple", "banana", "peace", "jason"]
+
+# rnd = random.choice(lst)
+
 # length = len(rnd)
-#
-# attempt = length + 3
-#
-# dash_str = ""
-#
-# dash_lst = []
-#
-# lst_rnd = []
-#
+
+# rnd_lst = []
+
+# masked = []
+
+# masked_str = ""
+
 # for x in rnd:
-#     lst_rnd.append(x)
-#
-# # Create dash string
-# for x in range(1, length+1):
-#     dash_str = dash_str + "-"
-# print(dash_str)
-# print(rnd)
-#
-# # Create dash list
-# for x in dash_str:
-#     dash_lst.append(x)
-#
-# # Create Loop
+#     rnd_lst.append(x)
+
+# for x in rnd_lst:
+#     masked.append("-")
+
+# attempts = length + 4
+
 # status = False
-# while attempt > 0 and status == False:
-#     choice = input("You have {} attempts.".format(attempt))
-#     p = lst_rnd.index(choice)
-#
-#     for x in lst_rnd:
-#         if x == choice and lst_rnd[p] != "#":
-#             lst_rnd[p] = "#"
-#     print(lst_rnd)
 
 
-# idx = []
-# for i in dash:
-#     idx.append(i)
-#
-# while attempt > 0:
-#     choice = input("You have {} attempts.".format(attempt))
-#     p = rnd.find(choice)
-#
-#     if choice in rnd:
-#         new = ""
-#         for x in rnd:
-#             if x == choice:
-#                 if idx[p] == "-":
-#                     idx[p] = x
-#                     for i in idx:
-#                         new = new + i
-#     else:
-#         print("Wrong")
-#         attempt -= 1
+# while status is False:
+#     for x in masked:
+#         masked_str = masked_str + x
+
+#     print(masked_str)
+
+#     if attempts == 0:
+#         print("You lost... Answer was [ {} ]".format(rnd))
+#         exit()
+
+#     while attempts > 0:
+#         masked_str = ""
+#         print("You have {} attempts.".format(attempts))
+#         choice = input("Select a letter: ")
+
+#         if choice in rnd_lst:
+#             print("Your selection '{}' is correct".format(choice))
+#             for x in rnd_lst:
+#                 if choice in rnd_lst:
+#                     p = rnd_lst.index(choice)
+#                     rnd_lst[p] = "-"
+#                     masked[p] = choice
+
+#             for x in masked:
+#                 masked_str += x
+
+#             print(masked_str)
+
+#             if masked_str == rnd:
+#                 print("You got it all. You won!")
+#                 exit()
+
+#         else:
+#             for x in masked:
+#                 masked_str += x
+
+#             print(masked_str)
+#             print("Wrong,try again...")
+#             attempts -= 1
